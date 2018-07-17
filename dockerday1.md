@@ -7,7 +7,12 @@
 1- SCRIPT TO INSTALL DOCKER 'CURL -FSSL HTTPS://GET.DOCKER.COM/ | SH' 
 
 
+
 [vagrant@localhost ~]$ curl -fsSL https://get.docker.com/ | sh
+
+
+
+
 # Executing docker install script, commit: 36b78b2
 + sudo -E sh -c 'yum install -y -q yum-utils'
 Package yum-utils-1.1.31-45.el7.noarch already installed and latest version
@@ -86,12 +91,21 @@ ui_repoid_vars = releasever,
 
 
 [vagrant@localhost ~]$ sudo systemctl status docker 
+
+
+
 ● docker.service - Docker Application Container Engine
    Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)
    Active: inactive (dead)
      Docs: https://docs.docker.com
 [vagrant@localhost ~]$ sudo systemctl start docker 
-[vagrant@localhost ~]$ sudo systemctl status docker 
+
+
+
+[vagrant@localhost ~]$ sudo systemctl status docker
+
+
+
 ● docker.service - Docker Application Container Engine
    Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)
    Active: active (running) since Tue 2018-07-17 18:46:20 +08; 3s ago
@@ -136,8 +150,15 @@ Docker version 18.05.0-ce, build f150324
 
 
 [vagrant@localhost ~]$ sudo su - vagrant
+
 Last login: Tue Jul 17 18:39:42 +08 2018 from 10.0.2.2 on pts/0
+
+
+
+
+
 [vagrant@localhost ~]$ docker images
+
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 
 
