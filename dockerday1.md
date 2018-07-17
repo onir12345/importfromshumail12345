@@ -90,6 +90,10 @@ ui_repoid_vars = releasever,
 
 
 
+
+
+
+
 2-START DOCKER SERVICE AND CHECK STATUS OF THE SAME.
 
 
@@ -126,9 +130,19 @@ ui_repoid_vars = releasever,
 
 
 
+
+
+
+
+
 3-ENABLE DOCKER SERVICE TO START AT EVERY MACHINE REBOOT.
 
 [vagrant@localhost ~]$ sudo systemctl enable docker
+
+
+
+
+
 
 
 
@@ -169,6 +183,9 @@ Docker version 18.05.0-ce, build f150324
 
 
 
+
+
+
 5-CONFIGURE NON ROOT USER TO RUN DOCKER COMMANDS WITHOUT SUDO.
 
 [vagrant@localhost ~]$ sudo usermod -aG docker vagrant
@@ -186,6 +203,9 @@ Last login: Tue Jul 17 18:39:42 +08 2018 from 10.0.2.2 on pts/0
 [vagrant@localhost ~]$ docker images
 
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+
+
 
 
 
@@ -342,6 +362,13 @@ Commands:
 
 
 
+
+
+
+
+
+
+
 7-DISPLAY SYSTEM INFORMATION USING DOCKER.
 
 
@@ -432,6 +459,8 @@ Insecure Registries:
  127.0.0.0/8
  
 Live Restore Enabled: false
+
+
 
 
 
