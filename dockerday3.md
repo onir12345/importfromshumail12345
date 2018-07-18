@@ -26,6 +26,8 @@ Status: Image is up to date for nginx:latest
 
 
 
+
+
 2-Run a container from nginx image and map container port 80 to system port 80.
 
 
@@ -65,6 +67,10 @@ root@cb7638838aaf:/#
  
  
  
+ 
+ 
+ 
+ 
 
 
 
@@ -82,7 +88,10 @@ shumail@shumail-Inspiron-N5110:~$ docker port cb7
 
 
 
+
+
 4-Run a docker container named "containexpose" from nginx image and expose port 80 of container to outer world 
+
 
 
 without mapping it to any of
@@ -103,13 +112,22 @@ Docker Volume:
 
 
 
+
+
 1-Create docker volume named "dbvol"
+
+
 
 
 shumail@shumail-Inspiron-N5110:~$ docker volume create dbvol 
 
 
+
+
 dbvol
+
+
+
 
 
 
@@ -124,6 +142,10 @@ shumail@shumail-Inspiron-N5110:~$ docker run -it --name wordpress -v dbvol:/var/
 
 
 root@279189d1a822:/var/www/html# 
+
+
+
+
 
 
 
@@ -144,6 +166,9 @@ local               5459c14f04752e7d86f9839cbbd60730ac3168680d420de22f414a0fcdc4
 
 
 local               dbvol
+
+
+
 
 
 
@@ -171,6 +196,11 @@ local               dbvol
 
 
 local               testvol
+
+
+
+
+
 
 
 
@@ -202,6 +232,8 @@ local               dbvol
 
 
 Docker Linking:
+
+
 
 
 
@@ -261,6 +293,9 @@ Status: Downloaded newer image for training/postgres:latest
 
 
 
+
+
+
 2-Run another container in detached mode with name "web" from image "training/webapp", link container "db" with 
 
 
@@ -315,6 +350,9 @@ Status: Downloaded newer image for training/webapp:latest
 
 
 
+
+
+
 3-Take a bash terminal in "web" container.
 
 
@@ -324,6 +362,13 @@ shumail@shumail-Inspiron-N5110:~$ docker exec -it web /bin/sh
 
 
 #
+
+
+
+
+
+
+
 
 
 4-Test container linking by doing a ping to "mydb"
